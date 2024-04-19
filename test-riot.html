@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riot's layout test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        body {
+            background-color: #0a0a0a;
+            padding: 130px;
+        }
+
+        .header-riot {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .text-header {
+            color: #eaeaea;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .btn-seeall {
+            color: #f9f9f9;
+            background-color: rgba(128, 128, 128, .2);
+            padding: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 800;
+            line-height: 2.5rem;
+            letter-spacing: .5px;
+        }
+
+        .main-what-happening {
+            cursor: pointer;
+            margin: 40px 0 100px 0;
+        }
+
+        .main-what-happening img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transform: scale(1);
+            transition: .3s;
+        }
+
+        .main-what-happening img:hover {
+            transform: scale(1.1);
+        }
+
+        .text-main-what-happening {
+            font-size: 35px;
+            color: #eaeaea;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .text-main-what-happening:hover {
+            text-decoration: underline;
+        }
+
+        .img-frame {
+            width: 1080px;
+            height: 664px;
+            display: block;
+            position: relative;
+            border-radius: 8px;
+            transition: .3s ease-out;
+            overflow: hidden;
+            top: 0;
+        }
+
+        .list-title {
+            background-color: #1f1f1f;
+            padding: 20px
+        }
+
+        .text-games, .list-games {
+            padding: 20px
+        }
+
+        .text-games {
+            color: #eaeaea;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            /* padding: 40px; */
+        }
+
+        ul li {
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: .3s;
+        }
+
+        ul li:hover {
+            border-color: #eaeaea;
+        }
+
+        .game-card-link img {
+            width: 770px;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 60px;
+            }
+            
+            .main-what-happening img {
+                width: 320px;
+            }
+
+            .img-frame {
+                width: 320px;
+                height: 196px;
+            }
+
+            .text-main-what-happening {
+                font-size: 20px;
+            }
+
+            ul {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .game-card-link img {
+                width: 60vw;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-riot">
+        <p class="text-header">Wát hép pừn ning?</p>
+        <!-- <a href="#" class="btn-seeall">
+            <span>Xem tất cả</span>
+        </a> -->
+    </div>
+    <div class="main-what-happening">
+        <div class="img-frame">
+            <a href="#"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b541db29-665e-4b1a-93f8-6abeebfc36d8/dfaf6m4-ac419ee7-87cd-4273-80d1-90bd6ea26699.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I1NDFkYjI5LTY2NWUtNGIxYS05M2Y4LTZhYmVlYmZjMzZkOFwvZGZhZjZtNC1hYzQxOWVlNy04N2NkLTQyNzMtODBkMS05MGJkNmVhMjY2OTkuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.efm7U0DHnfmT2vAFoPYyu1z9KQ48eY4_ss3t3tL_soE" width="1080" alt="main-happening"> </a> <br>
+        </div>
+        <a href="#" class="text-main-what-happening">Sinestrea Điệp Viên Cánh Cụt</a>
+    </div>
+
+    <div class="list-title">
+        <p class="text-games">Ao ờ gêm</p>
+        <ul class="list-games">
+            <li class="game-card">
+                <a href="#" class="game-card-link">
+                    <img src="https://www.riotgames.com/darkroom/900/4930733403fae24cf79e5e27be520202:f55e4c4a178d27648141bd2f5a240e9d/lolkv-2023.png" alt="card-game">
+                </a>
+            </li>
+            <li class="game-card">
+                <a href="#" class="game-card-link">
+                    <img src="https://www.riotgames.com/darkroom/900/4930733403fae24cf79e5e27be520202:f55e4c4a178d27648141bd2f5a240e9d/lolkv-2023.png" alt="card-game">
+                </a>
+            </li>
+            <li class="game-card">
+                <a href="#" class="game-card-link">
+                    <img src="https://www.riotgames.com/darkroom/900/4930733403fae24cf79e5e27be520202:f55e4c4a178d27648141bd2f5a240e9d/lolkv-2023.png" alt="card-game">
+                </a>
+            </li>
+            <li class="game-card">
+                <a href="#" class="game-card-link">
+                    <img src="https://www.riotgames.com/darkroom/900/4930733403fae24cf79e5e27be520202:f55e4c4a178d27648141bd2f5a240e9d/lolkv-2023.png" alt="card-game">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            
+        </div>
+    </footer>
+</body>
+</html>
